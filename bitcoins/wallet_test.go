@@ -22,7 +22,8 @@ func (s *WalletTestSuite) TestWallet() {
 
 	s.Run("withdraw within balance", func() {
 		s.Wallet = Wallet{balance: 10}
-		s.Wallet.Withdraw(10)
+		err := s.Wallet.Withdraw(10)
+		s.NoError(err)
 		s.assertBalance(0)
 	})
 
