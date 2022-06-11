@@ -1,4 +1,4 @@
-package hello
+package strings
 
 const german = "de"
 const englishHelloPrefix = "Hello"

@@ -1,4 +1,4 @@
-package hello_test
+package strings_test
 
 import (
 	"hello"
@@ -8,11 +8,11 @@ import (
 func TestHello(t *testing.T) {
 	assertHello := func(t testing.TB, input, expected string) {
 		t.Helper()
-		eq(t, hello.Hello(input, ""), expected)
+		eq(t, strings.Hello(input, ""), expected)
 	}
 	assertI18nHello := func(t *testing.T, name string, lang string, expected string) {
 		t.Helper()
-		eq(t, hello.Hello(name, lang), expected)
+		eq(t, strings.Hello(name, lang), expected)
 	}
 
 	t.Run("Hello(...) with name", func(t *testing.T) {
