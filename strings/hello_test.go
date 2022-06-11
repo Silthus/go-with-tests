@@ -1,18 +1,17 @@
-package strings_test
+package strings
 
 import (
-	"hello"
 	"testing"
 )
 
 func TestHello(t *testing.T) {
 	assertHello := func(t testing.TB, input, expected string) {
 		t.Helper()
-		eq(t, strings.Hello(input, ""), expected)
+		eq(t, Hello(input, ""), expected)
 	}
 	assertI18nHello := func(t *testing.T, name string, lang string, expected string) {
 		t.Helper()
-		eq(t, strings.Hello(name, lang), expected)
+		eq(t, Hello(name, lang), expected)
 	}
 
 	t.Run("Hello(...) with name", func(t *testing.T) {
